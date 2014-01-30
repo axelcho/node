@@ -1,7 +1,7 @@
 window.onload = function() {
  
     var messages = [];
-    var socket = io.connect('http://zyles.com');
+    var socket = io.connect('http://localhost');
     var field = document.getElementById("field");
     var sendButton = document.getElementById("send");
     var content = document.getElementById("content");
@@ -12,7 +12,7 @@ window.onload = function() {
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
-                html += '<b>' + (messages[i].username ? messages[i].username  + messages[i].entrydate : 'Zyles') + ': </b>' ;
+                html += '<b>' + (messages[i].username ? messages[i].username  + messages[i].entrydate : 'System') + ': </b>' ;
                 html += messages[i].message + '<br />';
             }
             content.innerHTML = html;
