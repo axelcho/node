@@ -37,7 +37,7 @@ routes(app, db);
 var io = require('socket.io').listen(app.listen(80));
 	
 io.sockets.on('connection', function (socket) {
-	socket.emit('message', { message: 'Welcome to the Zyles Chat Channel.' });
+	socket.emit('message', { message: 'Welcome to Chat' });
 	socket.on('send', function (data) {
 		io.sockets.emit('message', data);
 	});
