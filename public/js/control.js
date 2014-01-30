@@ -21,6 +21,8 @@ window.onload = function() {
         } else {
             console.log("There is a problem:", data);
         }
+		
+		
     });
  
 	//sendmessage event
