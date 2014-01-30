@@ -1,0 +1,65 @@
+.navbar-footer-bottom {
+  bottom: 0;
+  margin-bottom: 0;
+  border-width: 1px 0 0;
+}
+
+.jumbotron-filled{
+	background: url("/images/map.jpg");
+	height: 400px;
+	margin-bottom: 0px;
+}
+
+.brown{
+	background: url("/images/bgzy1.png");
+}
+
+
+.jumbotron-sname {
+font-size:18pt;
+font-family:times new roman;
+font-weight:bold;
+font-style:italic;
+color: #d1bf76; 
+}
+.jumbotron-stext {
+font-size:14pt;
+font-family:times new roman;
+font-weight:bold;
+font-style:italic;
+color: #d1bf76;
+margin-bottom:180px; 
+}
+
+.btn-brown{
+background-color: #d1bf76;
+color: #3B170B;
+}
+
+.navbar-brown{
+ background-color: #3B170B;
+ color: #F3E2A9;
+}
+
+.container-brown a:link {color:#3B170B;}    
+.container-brown a:visited {color:#3B170B;} 
+.container-brown a:hover {color:#F3E2A9;}   
+.container-brown a:active {color:#F3E2A9;}  
+
+.container-brown{
+padding-top: 100px;
+padding-bottom: 20px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+span.labeled {
+    display: inline-block;
+    vertical-align: top;
+}
+span.labeled span.labelx {
+    display: block;
+    text-align: center;
+    border-top: 1px solid black;
+} 
+
