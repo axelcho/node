@@ -52,15 +52,5 @@ window.onload = function() {
             sendMessage();
         }
     });
-});
-
-	//clean up message field
-	$("#field").focus(function() {
-  this.value = "";
-});
- 
-	//toggle chat div
-	$("#trigger").click(function(){	
-	$("#chatwindow").toggle();
-	});
+	}); 
 }
