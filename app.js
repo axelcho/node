@@ -32,7 +32,7 @@ app.use("/fonts", express.static(path.join(__dirname, '/public/fonts')));
 app.use(express.favicon(path.join(__dirname, '/public/images/favicon.ico'))); 
 
 // Application routes
-routes(app, db);
+routes(app);
 
 var io = require('socket.io').listen(app.listen(80));
 	
