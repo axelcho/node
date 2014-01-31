@@ -18,10 +18,17 @@ window.onload = function() {
             content.innerHTML = html;
 			content.scrollTop = content.scrollHeight;
 			
-        } else {
+        }
+		else {
             console.log("There is a problem:", data);
         }
 		
+		if(data.choice) {		
+			$('#main').load('/html/' + data.choice + '.html'); 			
+		}
+		else {
+			console.log("station not set"); 
+		}
 		
     });
  
@@ -42,7 +49,8 @@ window.onload = function() {
                 + currentdate.getSeconds() + ") ";
 		
             var text = field.value;
-            socket.emit('send', { message: text, username: name.value, entrydate: datetime });
+			var station = station.value; 
+            socket.emit('send', { message: text, username: name.value, entrydate: datetime, choice: station });
 			field.value = "";
         }
     };
