@@ -27,6 +27,7 @@ app.use("/images", express.static(path.join(__dirname, '/public/images')));
 app.use("/css", express.static(path.join(__dirname, '/public/css')));
 app.use("/js", express.static(path.join(__dirname, '/public/js')));
 app.use("/fonts", express.static(path.join(__dirname, '/public/fonts')));
+app.use("/html", express.static(path.join(__dirname, '/public/html')));
 	
 //add favicon
 app.use(express.favicon(path.join(__dirname, '/public/images/favicon.ico'))); 
