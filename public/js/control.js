@@ -1,26 +1,25 @@
-$(window).load( function() { 
+$(window).load( function() {
    
     var socket = io.connect('http://localhost');    
-    var sendButton = document.getElementById("send");  	
+    $("#station").focus();
+	
  
     socket.on('message', function (data) {		
-		if (data.choice) {
-			$('#main').load('http://localhost/html/' + data.choice + '.html');		
-		}
-		
-		else {
-            console.log("There is a problem:", data);
-        }
-		
-		
+	if (data.choice) {
+           $('#main').load('http://localhost/html/' + data.choice + '.html');		
+	}	
+	else {
+           console.log("There is a problem:", data);
+        }			
     });
- 
-	//sendmessage event
+
     $("#send").click(function() {
         socket.emit('send', {choice: station.value });        
     });	
+
+
+    $("#station").change(function() {
+       socket.emit('send', {choice: station.value });
+       $("#station").focus();
+    });
 });
-
-
-
-
