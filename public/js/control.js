@@ -1,22 +1,7 @@
-function requestFullScreen(el) {
-  // Supports most browsers and their versions.
-  var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen;
-
-  if (requestMethod) { // Native full screen.
-    requestMethod.call(el);
-  } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
-    var wscript = new ActiveXObject("WScript.Shell");
-    if (wscript !== null) {
-      wscript.SendKeys("{F11}");
-    }
-  }
-}
-
-
 window.onload = function() {
 
     var elem = document.body; // Make the body go full screen.
-	requestFullScreen(elem);
+	requestFullScreen.call(elem);
  
     var messages = [];
     var socket = io.connect('http://localhost');
