@@ -22,6 +22,12 @@ window.onload = function() {
             console.log("There is a problem:", data);
         }
 		
+		if (data.choice) {
+		$('#main').load('/html/' + data.choice + '.html');
+		
+		}
+		
+		
     });
  
 	//sendmessage event
