@@ -23,7 +23,7 @@ window.onload = function() {
         socket.emit('send', {choice: station.value });        
     };
 	
-	$("#station").change(function(){
+	$("select").change(function(){
 		sendMessage();
 	});
 	
