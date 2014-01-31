@@ -18,17 +18,10 @@ window.onload = function() {
             content.innerHTML = html;
 			content.scrollTop = content.scrollHeight;
 			
-        }
-		else {
+        } else {
             console.log("There is a problem:", data);
         }
 		
-		if(data.choice) {		
-			alert('/html/' + data.choice + '.html'); 			
-		}
-		else {
-			console.log("station not set"); 
-		}
 		
     });
  
