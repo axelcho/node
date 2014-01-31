@@ -38,7 +38,7 @@ routes(app);
 var io = require('socket.io').listen(app.listen(80));
 	
 io.sockets.on('connection', function (socket) {
-	socket.emit('message', { message: 'Welcome to Chat' });
+	socket.emit('message', { choice: '1' });
 	socket.on('send', function (data) {
 		io.sockets.emit('message', data);
 	});
