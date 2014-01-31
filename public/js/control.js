@@ -1,4 +1,4 @@
-window.onload = function() { 
+$(window).load( function() { 
    
     var socket = io.connect('http://localhost');    
     var sendButton = document.getElementById("send");  	
@@ -18,13 +18,8 @@ window.onload = function() {
 	//sendmessage event
     $("#send").click(function() {
         socket.emit('send', {choice: station.value });        
-    });
-	
-	$("select").change(function(){
-		socket.emit('send', {choice: station.value });
-	});
-	
-}
+    });	
+});
 
 
 
