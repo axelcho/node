@@ -24,7 +24,7 @@ window.onload = function() {
         }
 		
 		if(data.choice) {		
-			$('#main').load('/html/' + data.choice + '.html'); 			
+			alert('/html/' + data.choice + '.html'); 			
 		}
 		else {
 			console.log("station not set"); 
