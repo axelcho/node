@@ -23,7 +23,7 @@ window.onload = function() {
         }
 		
 		if (data.choice) {
-		$('#main').load('/html/' + data.choice + '.html');
+		$('#main').load('http://localhost/html/' + data.choice + '.html');
 		
 		}
 		
