@@ -1,10 +1,7 @@
 window.onload = function() { 
    
-    var socket = io.connect('http://localhost');
-    var field = document.getElementById("field");
-    var sendButton = document.getElementById("send");
-    var content = document.getElementById("content");
-    var name = document.getElementById("name");		
+    var socket = io.connect('http://localhost');    
+    var sendButton = document.getElementById("send");  	
  
     socket.on('message', function (data) {		
 		if (data.choice) {
@@ -19,12 +16,12 @@ window.onload = function() {
     });
  
 	//sendmessage event
-    sendButton.onclick = sendMessage = function() {
+    $("#send").click(function() {
         socket.emit('send', {choice: station.value });        
-    };
+    });
 	
 	$("select").change(function(){
-		sendMessage();
+		socket.emit('send', {choice: station.value });
 	});
 	
 }
