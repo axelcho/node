@@ -22,7 +22,6 @@ window.onload = function() {
             console.log("There is a problem:", data);
         }
 		
-		
     });
  
 	//sendmessage event
@@ -42,8 +41,8 @@ window.onload = function() {
                 + currentdate.getSeconds() + ") ";
 		
             var text = field.value;
-			var station = station.value; 
-            socket.emit('send', { message: text, username: name.value, entrydate: datetime, choice: station });
+
+            socket.emit('send', { message: text, username: name.value, entrydate: datetime, choice: station.value });
 			field.value = "";
         }
     };
