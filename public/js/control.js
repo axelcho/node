@@ -22,6 +22,11 @@ window.onload = function() {
     sendButton.onclick = sendMessage = function() {
         socket.emit('send', {choice: station.value });        
     };
+	
+	$("#station").change(function(){
+		sendMessage();
+	});
+	
 }
 
 
